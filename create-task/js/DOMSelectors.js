@@ -6,6 +6,7 @@ const DOMSelectors = {
     clear: document.getElementById("clear"),
     weightedAvg: document.getElementById("weightedAvg"),
     letterGrade: document.getElementById("letterGrade"),
+    inputs: document.getElementsByTagName ("td") 
 }
 
 export { DOMSelectors };

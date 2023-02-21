@@ -7,14 +7,22 @@ DOMSelectors.calculate.addEventListener("click", function () {
   letters(weightedAvg);
 });
 
+//upon clicking the "clear" button, the 'clear' function is activated
+DOMSelectors.clear.addEventListener("click", function () {
+  clear();
+});
+
+let weightedAvg;
+let userWeights = DOMSelectors.weight;
+let userGrades = DOMSelectors.grade;
+let descriptions = DOMSelectors.description;
 
 function calculate() {
   //opens up arrays to house the weights and grades
   let weights = [];
   let grades = [];
   //weights and grades that will be pushed into their respective arrays
-  let userWeights = DOMSelectors.weight;
-  let userGrades = DOMSelectors.grade;
+
   //takes the value of the user inputs and pushes it into the grade and weight arrays
   //parseFloat can handle fractional values, so parseInt is not used in this case
   for (let i = 0; i < userGrades.length; i++) {
@@ -22,32 +30,32 @@ function calculate() {
     let userWeight = parseFloat((userWeights[i].value) / 100); //divides the user's grade's weight by 100, then turns it into a floating point number
     //pushes floating point numbers of weights and grades into their respective arrays
     //accounts for non-numerical or empty inputs from the user
-    if (isNaN(userGrade)||isNaN(userWeight)){
+    if (isNaN(userGrade) || isNaN(userWeight)) {
       weights.push(0);
       grades.push(0);
-    } else if (!isNaN(userGrade)||!isNaN(userWeight)){
-    weights.push(userWeight);
-    grades.push(userGrade);
+    } else if (!isNaN(userGrade) || !isNaN(userWeight)) {
+      weights.push(userWeight);
+      grades.push(userGrade);
+    }
   }
-}
   //console logs the grade and weight arrays
   console.log("grades: ", (grades));
   console.log("weights: ", (weights));
   //calculate the weighted average
   let weightedSum = 0;
-  let totalWeight = 0; 
+  let totalWeight = 0;
   for (let i = 0; i < grades.length; i++) {
     weightedSum += ((grades[i]) * (weights[i])); //for each grade in the array, multiply it by the weight in the array
     totalWeight += weights[i]; //sum of all values in the weights array
   }
-  let weightedAvg = ((weightedSum) / (totalWeight));
-  if (isNaN(weightedAvg)){
+  weightedAvg = ((weightedSum) / (totalWeight));
+  if (isNaN(weightedAvg)) {
     DOMSelectors.weightedAvg.innerHTML = "invalid inputs—weight cannot be summed to 0";
-  } else if (!isNaN(weightedAvg)){
-  //displays weighted average rounded to the hundredths place
-  DOMSelectors.weightedAvg.innerHTML = weightedAvg.toFixed(2);
-  console.log("weighted average: ", (weightedAvg));
-}
+  } else if (!isNaN(weightedAvg)) {
+    //displays weighted average rounded to the hundredths place
+    DOMSelectors.weightedAvg.innerHTML = weightedAvg.toFixed(2);
+    console.log("weighted average: ", (weightedAvg));
+  }
 };
 
 
@@ -83,5 +91,14 @@ function letters(weightedAvg) {
   }
 };
 
-
-
+function clear() {
+  userGrades.forEach((grade) =>{
+    grade.value = "";
+  });
+  userWeights.forEach((weight)=> {
+    weight.value = "";
+  });
+  descriptions.forEach((description)=>{
+    description.value="";
+  });
+};

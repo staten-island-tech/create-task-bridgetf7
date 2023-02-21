@@ -7,113 +7,114 @@
   <title>Weighted Average Calculator</title>
 </head>
 
+
+
+
 <body>
-  <h1>Weighted Average Calculator</h1>
-  <!-- <h2>This calculator will compute your weighted average based on values provided by the user. 
-Using the computed weighted average, it will be translated into its letter-grade equivalent.
-</h2> -->
-
-
-  <section class="inputs">
-
+  <div id="main">
+    <h1>Weighted Average Calculator</h1>
+    <!-- <h2>This calculator will compute your weighted average based on values provided by the user. 
+    Using the computed weighted average, it will be translated into its letter-grade equivalent.
+    </h2> -->
     <div id="labels">
       <h2 class="labels">description (optional)</h2>
       <h2 class="labels">grade</h2>
       <h2 class="labels">weight (in %)</h2>
     </div>
 
-    <form>
-      <div class="userInputs">
-        <div class="userInput">
+    <table class="userInputs">
+      <tr>
+        <td>
           <label for="description1">description (optional)</label>
           <input type="text" class="description" id="description1">
-        </div>
-        <div class="userInput">
+        </td>
+        <td>
           <label for="grade1">grade</label>
           <input type="number" class="grade" id="grade1">
-        </div>
-        <div class="userInput">
-          <label for="weight1">weight (in %)</label>
+        </td>
+        <td>
+          <label for="weight1">weight</label>
           <input type="number" class="weight" id="weight1">
-        </div>
-      </div>
+        </td>
+      </tr>
 
-      <div class="userInputs">
-        <div class="userInput">
+      <tr>
+        <td>
           <label for="description2">description (optional)</label>
           <input type="text" class="description" id="description2">
-        </div>
-        <div class="userInput">
+        </td>
+        <td>
           <label for="grade2">grade</label>
           <input type="number" class="grade" id="grade2">
-        </div>
-        <div class="userInput">
-          <label for="weight2">weight (in %)</label>
+        </td>
+        <td>
+          <label for="weight2">weight</label>
           <input type="number" class="weight" id="weight2">
-        </div>
-      </div>
+        </td>
+      </tr>
 
-      <div class="userInputs">
-        <div class="userInput">
+      <tr>
+        <td>
           <label for="description3">description (optional)</label>
           <input type="text" class="description" id="description3">
-        </div>
-        <div class="userInput">
+        </td>
+        <td>
           <label for="grade3">grade</label>
           <input type="number" class="grade" id="grade3">
-        </div>
-        <div class="userInput">
-          <label for="weight3">weight (in %)</label>
+        </td>
+        <td>
+          <label for="weight3">weight</label>
           <input type="number" class="weight" id="weight3">
-        </div>
-      </div>
+        </td>
+      </tr>
 
-      <div class="userInputs">
-        <div class="userInput">
+      <tr>
+        <td>
           <label for="description4">description (optional)</label>
           <input type="text" class="description" id="description4">
-        </div>
-        <div class="userInput">
+        </td>
+        <td>
           <label for="grade4">grade</label>
           <input type="number" class="grade" id="grade4">
-        </div>
-        <div class="userInput">
-          <label for="weight4">weight (in %)</label>
+        </td>
+        <td>
+          <label for="weight4">weight</label>
           <input type="number" class="weight" id="weight4">
-        </div>
-      </div>
+        </td>
+      </tr>
 
-      <div class="userInputs">
-        <div class="userInput">
+      <tr>
+        <td>
           <label for="description5">description (optional)</label>
           <input type="text" class="description" id="description5">
-        </div>
-        <div class="userInput">
+        </td>
+        <td>
           <label for="grade5">grade</label>
           <input type="number" class="grade" id="grade5">
-        </div>
-        <div class="userInput">
-          <label for="weight5">weight (in %)</label>
+        </td>
+        <td>
+          <label for="weight5">weight</label>
           <input type="number" class="weight" id="weight5">
-        </div>
-      </div>
+        </td>
+      </tr>
+    </table>
 
-    </form>
 
-  </section>
 
-  <div class="buttons">
-    <button id="calculate">calculate</button>
-    <button id="clear">clear</button>
+
+    <div class="buttons">
+      <button id="calculate">calculate</button>
+      <button id="clear">clear</button>
+    </div>
+
+    <div class="results">
+      <p>weighted average (rounded to the hundredths place):</p>
+      <p class="result" id="weightedAvg"></p>
+      <p>letter grade equivalent:</p>
+      <p class="result" id="letterGrade"></p>
+    </div>
+
   </div>
-
-  <div class="results">   
-    <p>weighted average (rounded to the hundredths place):</p>
-    <p class="result" id="weightedAvg"></p>
-    <p>letter grade equivalent:</p>
-    <p class="result" id="letterGrade"></p>
-  </div>
-
   <script type="module" src="./js/main.js"></script>
 </body>
 
