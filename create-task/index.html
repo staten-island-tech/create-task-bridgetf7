@@ -16,13 +16,16 @@
     <!-- <h2>This calculator will compute your weighted average based on values provided by the user. 
     Using the computed weighted average, it will be translated into its letter-grade equivalent.
     </h2> -->
-    <div id="labels">
-      <h2 class="labels">description (optional)</h2>
-      <h2 class="labels">grade</h2>
-      <h2 class="labels">weight (in %)</h2>
-    </div>
+ 
+<div class="container">
 
-    <table class="userInputs">
+<div class="userInputs"> 
+    <table>
+      <tr class="labels">
+        <th>Description</th>
+        <th>Grade</th>
+        <th>Weight</th>
+      </tr>
       <tr>
         <td>
           <label for="description1">description (optional)</label>
@@ -98,22 +101,26 @@
         </td>
       </tr>
     </table>
-
-
-
-
+    <br>
     <div class="buttons">
       <button id="calculate">calculate</button>
       <button id="clear">clear</button>
     </div>
+</div>
+
+
+
 
     <div class="results">
-      <p>weighted average (rounded to the hundredths place):</p>
+      <p>Weighted Average (x/100):</p>
+      <br>
       <p class="result" id="weightedAvg"></p>
-      <p>letter grade equivalent:</p>
+      <br>
+      <p>Letter Grade Equivalent:</p>
+      <br>
       <p class="result" id="letterGrade"></p>
     </div>
-
+</div>
   </div>
   <script type="module" src="./js/main.js"></script>
 </body>

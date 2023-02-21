@@ -12,17 +12,20 @@ body,
   /*colours*/
   --darkGrey: #161c2a;
   --lightGrey: #2d333f;
-  --yellow: #efa862;
-  --lightYellow: #f4ddb4;
+  --slate: #daddd8;
   /*typograghy*/
   --h1: 5rem;
-  --h2: 3.5rem;
+  --h2: 2.5rem;
   --h3: 2.5rem;
   --p: 2.12rem;
 }
 
 #main {
   margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -32,7 +35,7 @@ h1 {
   text-align: center;
   line-height: 7.5rem;
   letter-spacing: -0.1rem;
-  color: var(--yellow); 
+  color: var(--slate);
 }
 
 label {
@@ -40,66 +43,123 @@ label {
 }
 
 input {
-  width: 20rem;
+  width: 17rem;
   height: 3.5rem;
   color: white;
   font-size: var(--p);
   font-family: 'Source Sans Pro', sans-serif;
-  padding-left: 0.5rem;
-  margin: 1rem;
-  border: solid var(--lightYellow) 0.1rem;
+  border: solid var(--slate) 0.1rem;
+  text-align: center;
 }
 
-tbody{
+br {
+  display: block;
+  content: "";
+  margin-top: 4rem;
+}
+
+td {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+tr {
+  display: flex;
+  flex-direction: row;
+}
+
+.userInputs {
+  width: 65rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  border: solid var(--slate) 0.2rem;
+  background-color: var(--lightGrey);
+  margin: 2rem;
+}
+
+table {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: wheat;
+  color: var(--lightGrey);
+}
+
+td,
+tr {
+  background-color: var(--lightGrey);
+  color: var(--lightGrey);
 }
 
 #labels {
-  width: 65rem;
+  width: 53.5rem;
   font-size: var(--h2);
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  color: var(--slate);
+  background-color: var(--lightGrey);
 }
 
+h2{
+  background-color: var(--lightGrey);
+  margin-left: 2rem;
+}
 
+th{
+  font-size: var(--h2);
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: var(--slate);
+  background-color: var(--lightGrey);
+}
 .results {
   background-color: var(--lightGrey);
-  width: 60rem;
-  height: 15rem;
-  border-radius: 0.6rem;
-  border: solid var(--lightYellow) 0.2rem;
+  width: 30rem;
+  height: 40rem;
+  border-radius: 0.4rem;
+  border: solid var(--slate) 0.2rem;
   display: flex;
   flex-direction: column;
+  margin: 2rem;
+  padding: 2rem;
 }
 
-
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+
 }
 
 button {
   font-size: var(--p);
   width: 16rem;
   height: 4rem;
+  margin: 1rem;
   padding: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.1rem;
-  border: solid var(--lightYellow) 0.1rem;
-  border-radius: 0.6rem;
-  color: var(--lightYellow);
+  border-radius: 1rem;
+  border: solid var(--slate) 0.2rem;
+  color: var(--slate);
   background-color: var(--lightGrey);
-  margin: 2rem;
 }
 
 p {

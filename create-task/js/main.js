@@ -16,6 +16,7 @@ let weightedAvg;
 let userWeights = DOMSelectors.weight;
 let userGrades = DOMSelectors.grade;
 let descriptions = DOMSelectors.description;
+let results=DOMSelectors.results;
 
 function calculate() {
   //opens up arrays to house the weights and grades
@@ -50,7 +51,7 @@ function calculate() {
   }
   weightedAvg = ((weightedSum) / (totalWeight));
   if (isNaN(weightedAvg)) {
-    DOMSelectors.weightedAvg.innerHTML = "invalid inputs—weight cannot be summed to 0";
+    DOMSelectors.weightedAvg.innerHTML = "Invalid Inputs";
   } else if (!isNaN(weightedAvg)) {
     //displays weighted average rounded to the hundredths place
     DOMSelectors.weightedAvg.innerHTML = weightedAvg.toFixed(2);
@@ -100,5 +101,8 @@ function clear() {
   });
   descriptions.forEach((description)=>{
     description.value="";
+  });
+  results.forEach((result)=>{
+    result.innerHTML="";
   });
 };
