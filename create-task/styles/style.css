@@ -1,0 +1,134 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: var(--darkGrey);
+}
+
+:root {
+  /*colours*/
+  --darkGrey: #161c2a;
+  --lightGrey: #2d333f;
+  --yellow: #efa862;
+  --lightYellow:#f4ddb4;
+  /*typograghy*/
+  --h1: 5rem;
+  --h2: 3.5rem;
+  --h3: 2.5rem;
+  --p: 2.12rem;
+}
+
+h1 {
+  margin-top: 5rem;
+  font-family: 'Lato', sans-serif;
+  font-size: var(--h1);
+  text-align: left;
+  margin-left: 5rem;
+  color: var(--yellow);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userInputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#labels {
+  width: 65rem;
+  font-size: var(--h2);
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.labels {
+  color: var(--yellow);
+}
+
+h2 {
+  margin: 2rem;
+}
+
+
+.results {
+  background-color: var(--lightGrey);
+  width: 60rem;
+  height: 15rem;
+  border-radius: 0.6rem;
+  border: solid var(--yellow) 0.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+label {
+  visibility: hidden;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 20rem;
+  height: 3.5rem;
+  color: white;
+  font-size: var(--p);
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-left: 0.5rem;
+  margin: 1rem;
+  border: solid var(--lightYellow) 0.1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  font-size: var(--p);
+  width: 16rem;
+  height: 4rem;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.1rem;
+  border: solid var(--lightYellow) 0.1rem;
+  border-radius: 0.6rem;
+  color: var(--lightYellow);
+  background-color: var(--lightGrey);
+  margin: 2rem;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: var(--p);
+  line-height: 3rem;
+  text-align: center;
+  background-color: var(--lightGrey);
+  color: white;
+}
