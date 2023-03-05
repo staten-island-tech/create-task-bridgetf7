@@ -3,7 +3,7 @@ import { DOMSelectors } from "./DOMSelectors";
 
 //upon clicking the "calculate" button, the 'calculate' and 'letters' function is activated
 DOMSelectors.calculate.addEventListener("click", function () {
-  calculate();
+  calculate(userGrades, userWeights);
   letters(weightedAvg);
 });
 
@@ -18,7 +18,7 @@ let userGrades = DOMSelectors.grade;
 let descriptions = DOMSelectors.description;
 let results = DOMSelectors.results;
 
-function calculate() {
+function calculate(userGrades,userWeights) {
   //opens up arrays to house the weights and grades
   let weights = [];
   let grades = [];
@@ -91,7 +91,6 @@ function letters(weightedAvg) {
     letterGrade.innerHTML = "F";
   }
 };
-
 //clears inputs and outputs
 function clear() {
   userGrades.forEach((grade) => {
