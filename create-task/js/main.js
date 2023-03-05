@@ -16,13 +16,13 @@ let weightedAvg;
 let userWeights = DOMSelectors.weight;
 let userGrades = DOMSelectors.grade;
 let descriptions = DOMSelectors.description;
-let results=DOMSelectors.results;
+let results = DOMSelectors.results;
 
 function calculate() {
   //opens up arrays to house the weights and grades
   let weights = [];
   let grades = [];
-  //weights and grades that will be pushed into their respective arrays
+
 
   //takes the value of the user inputs and pushes it into the grade and weight arrays
   //parseFloat can handle fractional values, so parseInt is not used in this case
@@ -30,7 +30,7 @@ function calculate() {
     let userGrade = parseFloat(userGrades[i].value); //takes the user's grade and turns it into a floating point number
     let userWeight = parseFloat((userWeights[i].value) / 100); //divides the user's grade's weight by 100, then turns it into a floating point number
     //pushes floating point numbers of weights and grades into their respective arrays
-    //accounts for non-numerical or empty inputs from the user
+    //accounts for non-numerical or empty inputs from the user by pushing in a value of 0
     if (isNaN(userGrade) || isNaN(userWeight)) {
       weights.push(0);
       grades.push(0);
@@ -46,7 +46,7 @@ function calculate() {
   let weightedSum = 0;
   let totalWeight = 0;
   for (let i = 0; i < grades.length; i++) {
-    weightedSum += ((grades[i]) * (weights[i])); //for each grade in the array, multiply it by the weight in the array
+    weightedSum += ((grades[i]) * (weights[i])); //for each grade in the array, multiply it by the respective weight in the "weights" array
     totalWeight += weights[i]; //sum of all values in the weights array
   }
   weightedAvg = ((weightedSum) / (totalWeight));
@@ -92,17 +92,18 @@ function letters(weightedAvg) {
   }
 };
 
+//clears inputs and outputs
 function clear() {
-  userGrades.forEach((grade) =>{
+  userGrades.forEach((grade) => {
     grade.value = "";
   });
-  userWeights.forEach((weight)=> {
+  userWeights.forEach((weight) => {
     weight.value = "";
   });
-  descriptions.forEach((description)=>{
-    description.value="";
+  descriptions.forEach((description) => {
+    description.value = "";
   });
-  results.forEach((result)=>{
-    result.innerHTML="";
+  results.forEach((result) => {
+    result.innerHTML = "";
   });
 };
